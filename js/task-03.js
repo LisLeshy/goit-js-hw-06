@@ -13,5 +13,20 @@ const images = [
   },
 ];
 
-const a = 5;
-console.log(a);
+// for (let el of images)
+//   document
+//     .querySelector(".gallery")
+//     .insertAdjacentHTML(
+//       "beforeEnd",
+//       `<li><img src="${el.url}" alt="${el.alt}"></li>`
+//     );
+// console.log(images);
+
+for (let img of images) {
+  const galleryEl = document.querySelector(".gallery");
+  galleryEl.insertAdjacentHTML(
+    "beforeEnd",
+    `<li><img src="${img.url}" alt="${img.alt}"></li>`
+  );
+}
+console.log(images);
