@@ -14,23 +14,37 @@ const images = [
 ];
 
 // V1
-const galleryEl = document.querySelector(".gallery");
+// const galleryEl = document.querySelector(".gallery");
 
-for (let img of images) {
-  galleryEl.insertAdjacentHTML(
-    "beforeEnd",
-    `<li><img src="${img.url}" alt="${img.alt}"></li>`
-  );
-}
-console.log(galleryEl);
+// for (let img of images) {
+//   galleryEl.insertAdjacentHTML(
+//     "beforeEnd",
+//     `<li><img src="${img.url}" alt="${img.alt}"></li>`
+//   );
+// }
+// console.log(galleryEl);
 
 // v2;
 
+const galleryAllEl = document.querySelector(".gallery");
+
+images.forEach((img) => {
+  const galleryEl = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
+  console.log(galleryEl);
+
+  galleryAllEl.insertAdjacentHTML("beforeend", galleryEl);
+});
+
+// V3 недоделано
+
 // const galleryAllEl = document.querySelector(".gallery");
 
-// images.forEach((img) => {
-//   const galleryEl = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
-//   console.log(galleryEl);
+// // const newImages = [];
+
+// for (let img of images) {
+//   const galleryEl = galleryAllEl.insertAdjacentHTML(
+//     "beforeEnd",
+//     `<li><img src="${img.url}" alt="${img.alt}"></li>`
+//   );
 //   // newImages.push(galleryEl);
-//   galleryAllEl.insertAdjacentHTML("beforeend", galleryEl);
-// });
+// }
