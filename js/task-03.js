@@ -13,20 +13,24 @@ const images = [
   },
 ];
 
-// for (let el of images)
-//   document
-//     .querySelector(".gallery")
-//     .insertAdjacentHTML(
-//       "beforeEnd",
-//       `<li><img src="${el.url}" alt="${el.alt}"></li>`
-//     );
-// console.log(images);
+// V1
+const galleryEl = document.querySelector(".gallery");
 
 for (let img of images) {
-  const galleryEl = document.querySelector(".gallery");
   galleryEl.insertAdjacentHTML(
     "beforeEnd",
     `<li><img src="${img.url}" alt="${img.alt}"></li>`
   );
 }
-console.log(images);
+console.log(galleryEl);
+
+// v2;
+
+// const galleryAllEl = document.querySelector(".gallery");
+
+// images.forEach((img) => {
+//   const galleryEl = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
+//   console.log(galleryEl);
+//   // newImages.push(galleryEl);
+//   galleryAllEl.insertAdjacentHTML("beforeend", galleryEl);
+// });
