@@ -26,25 +26,33 @@ const images = [
 
 // v2;
 
-const galleryAllEl = document.querySelector(".gallery");
-
-images.forEach((img) => {
-  const galleryEl = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
-  console.log(galleryEl);
-
-  galleryAllEl.insertAdjacentHTML("beforeend", galleryEl);
-});
-
-// V3 недоделано
-
 // const galleryAllEl = document.querySelector(".gallery");
 
-// // const newImages = [];
+// images.forEach((img) => {
+//   const galleryEl = `<li><img src="${img.url}" alt="${img.alt}"></li>`;
+//   console.log(galleryEl);
 
-// for (let img of images) {
-//   const galleryEl = galleryAllEl.insertAdjacentHTML(
-//     "beforeEnd",
+//   galleryAllEl.insertAdjacentHTML("beforeend", galleryEl);
+// });
+
+// V3
+
+const galleryAllEl = document.querySelector(".gallery");
+
+const galleryEl = (img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`;
+console.log(galleryEl);
+
+const allList = images.map(galleryEl).join();
+console.log(allList);
+galleryAllEl.insertAdjacentHTML("beforeend", allList);
+
+// V4 (разобраться с алгоритом )
+
+// const galleryEl = images.map((img) => {
+//   const galleryAllEl = document.querySelector(".gallery");
+//   galleryAllEl.insertAdjacentHTML(
+//     "beforeend",
 //     `<li><img src="${img.url}" alt="${img.alt}"></li>`
 //   );
-//   // newImages.push(galleryEl);
-// }
+// });
+// console.log(galleryEl);
