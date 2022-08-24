@@ -7,4 +7,4 @@ function onBlurInput(a) {
   console.log(a.currentTarget.value);
 }
 
-input.addEventListener("blur", onBlurInput);
+input.addEventListener("input", onBlurInput);

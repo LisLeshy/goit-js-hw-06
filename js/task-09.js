@@ -15,6 +15,7 @@ function onClickButton() {
     "style",
     "background-color: " + spanEl.textContent
   );
+  console.log(spanEl.textContent);
 }
 
 buttonEl.addEventListener("click", onClickButton);

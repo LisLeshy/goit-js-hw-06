@@ -8,17 +8,11 @@ function onFormSubmit(event) {
 
   const email = formEl.email.value;
   const password = formEl.password.value;
-  console.log(email);
-  console.log(password);
-
-  //   const formData = new FormData(event.currentTarget);
-  //   console.log(formData);
-  //     formData.forEach((name, value) => console.log("${ name },${value}"));
+  // console.log(email);
+  // console.log(password);
 
   if (email === "" || password === "") {
-    alert("заполните поле ввода");
-  }
-  console.log({ email, password });
-
+    return alert("заполните поле ввода");
+  } else console.log({ email, password });
   form.reset();
 }

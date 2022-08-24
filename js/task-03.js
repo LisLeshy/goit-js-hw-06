@@ -42,7 +42,7 @@ const galleryAllEl = document.querySelector(".gallery");
 const galleryEl = (img) => `<li><img src="${img.url}" alt="${img.alt}"></li>`;
 console.log(galleryEl);
 
-const allList = images.map(galleryEl).join();
+const allList = images.map(galleryEl).join("");
 console.log(allList);
 galleryAllEl.insertAdjacentHTML("beforeend", allList);
 
